@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>ESP Seminar Series 2025/2026</title>
+<style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #f5f7fa, #e4e7eb);
+        color: #333333;
+        margin: 0;
+        padding: 20px;
+    }
+    h1 {
+        text-align: center;
+        color: #1a3d5c; /* Azul mais forte e elegante */
+        margin-bottom: 10px;
+        font-size: 2.7em;
+        font-weight: 700;
+        text-shadow: 1px 1px 3px rgba(26, 61, 92, 0.3);
+    }
+    h2 {
+        text-align: center;
+        color: #5a6a73;
+        margin-bottom: 30px;
+        font-size: 1.3em;
+        font-weight: 600;
+    }
+    .group-photo {
+        display: block;
+        margin: 30px auto;
+        max-width: 90%;
+        border-radius: 12px;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    }
+    .footer-zoom-link {
+        color: #4a6a82;
+        font-weight: 700;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+    .footer-zoom-link:hover {
+        color: #2c4a5a;
+        text-decoration: underline;
+    }
+    .table-container {
+        max-width: 90%;
+        margin: 0 auto;
+        background-color: #ffffff;
+        border-radius: 12px;
+        overflow-x: auto;
+        box-shadow: 0 8px 20px rgba(59, 74, 87, 0.15);
+        border: 2px solid #4a6a82;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        min-width: 600px;
+    }
+    th, td {
+        padding: 15px;
+        border: 1px solid #c1c8cd;
+        text-align: left;
+    }
+    th {
+        background: #4a6a82;
+        color: #f0f4f8;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        font-weight: 700;
+        box-shadow: inset 0 -3px 5px rgba(0,0,0,0.1);
+    }
+    tr:nth-child(even) {
+        background-color: #f4f7fa;
+    }
+    tr:hover {
+        background-color: #d9e2ea;
+        cursor: pointer;
+    }
+    td {
+        font-size: 1em;
+        color: #3b4a57;
+    }
+    .expandable-row {
+        display: none;
+        background-color: #f9fafb;
+        color: #5a6a73;
+        font-style: italic;
+    }
+    .see-more {
+        color: #4a6a82;
+        font-size: 0.9em;
+        cursor: pointer;
+        text-decoration: none;
+        font-weight: 600;
+        margin-left: 10px;
+        transition: color 0.3s ease;
+    }
+    .see-more:hover {
+        color: #2c4a5a;
+        text-decoration: underline;
+    }
+    footer {
+        background: linear-gradient(90deg, #4a6a82, #3b4a57);
+        padding: 25px 20px;
+        text-align: center;
+        font-size: 15px;
+        color: #e1e6eb;
+        margin-top: 60px;
+        border-radius: 12px 12px 0 0;
+        box-shadow: 0 -4px 15px rgba(74, 106, 130, 0.5);
+        font-weight: 600;
+    }
+    .footer-link {
+        color: #b0c4cc;
+        font-weight: 700;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+    .footer-link:hover {
+        color: #d6e1e8;
+        text-decoration: underline;
+    }
+    @media (max-width: 768px) {
+        h1 { font-size: 2.2em; }
+        h2 { font-size: 1.1em; }
+        th, td { font-size: 0.95em; padding: 12px; }
+    }
+    @media (max-width: 480px) {
+        h1 { font-size: 1.8em; }
+        h2 { font-size: 1em; }
+        th, td { font-size: 0.85em; padding: 10px; }
+    }
+</style>
+<script>
+    function toggleRow(rowId) {
+        const row = document.getElementById(rowId);
+        if (row.style.display === 'table-row') {
+            row.style.display = 'none';
+        } else {
+            row.style.display = 'table-row';
+        }
+    }
+</script>
+</head>
+
+<body>
+
+    <h1>ESP Seminar Series 2025/2026</h1>
+    <h2>
+        On Tuesdays, 11am, in the Common Area of the ex SISSA building.<br />
+        To follow on Zoom: 
+        <a href="https://zoom.us/j/94424611839?pwd=TkFGcGxFaUhxVjJkakdXQnorTm45QT09" target="_blank" class="footer-zoom-link">Join Zoom Meeting</a> 
+    </h2>
+
+    <div class="table-container">
+        <table>
+            <tr> 
+                <th>Date</th>
+                <th>Speaker</th>
+                <th>Title</th>
+            </tr>
+            
+            
+            <tr>
+                <td>02 September</td>
+                <td>Luka Ilic</td>
+                <td>
+                    Impact of Dust Mineralogy Representation on Modeled Optical Properties and Radiative Effects Using MONARCH
+                    <span class="see-more" onclick="toggleRow('details2')">see more...</span>
+                </td>
+            </tr>
+            <tr id="details2" class="expandable-row">
+                <td colspan="3">
+                    Mineral dust from arid regions is a major contributor to the global aerosol burden and a key source of uncertainty in weather and climate models due to its radiative effects. These effects, particularly in the shortwave, depend strongly on particle size and mineral composition, especially the presence of iron oxide–carrying minerals. Many global dust models assume fixed or homogeneous source mineralogy, often neglecting size-dependent variability. This is further complicated by uncertainties in source datasets and the computational cost of explicit composition modeling. We use the MONARCH (Multiscale Online Non-hydrostatic AtmospheRe CHemistry) model, coupled with RRTMG, to simulate global dust transport and radiative effects under different mineralogical assumptions. MONARCH resolves individual mineral tracers and uses the Maxwell-Garnett approach to compute optical properties of host particles with iron oxide inclusions. The set of numerical experiments covers varying mineralogy assumptions and a set of soil mineralogy atlases, including the new high-resolution EMIT product.
+                </td>
+            </tr>
+
+
+
+            <tr>
+                <td>07 October</td>
+                <td>Sobia Ayub</td>
+                <td>
+                    Estimation of Snow Line Altitude Utilising Satellite Imagery of Alpine Glaciers
+                    <span class="see-more" onclick="toggleRow('details3')">see more...</span>
+                </td>
+            </tr>
+            <tr id="details3" class="expandable-row">
+                <td colspan="3">
+                    Soon.
+                </td>
+            </tr>
+            
+            
+            
+        </table> 
+    </div>
+
+    <footer>
+        <p>
+            <a href="https://www.ictp.it/esp" target="_blank" class="footer-link">Visit ICTP ESP Website</a>
+        </p>
+        <p>
+            Want to present a seminar? Schedule by emailing
+            <a href="mailto:mda_silv@ictp.it" class="footer-link">mda_silv@ictp.it</a>.
+        </p>
+    </footer>
+
+</body>
+</html>
+
