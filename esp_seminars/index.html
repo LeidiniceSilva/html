@@ -122,11 +122,118 @@
         color: #d6e1e8;
         text-decoration: underline;
     }
+    
+    /* ICTP ESP Icons Section */
+    .ictp-esp-info {
+        background: linear-gradient(135deg, #ffffff, #f0f4f8);
+        border-radius: 12px;
+        padding: 30px;
+        margin: 40px auto;
+        max-width: 90%;
+        box-shadow: 0 8px 20px rgba(59, 74, 87, 0.15);
+        border: 2px solid #4a6a82;
+        text-align: center;
+    }
+    
+    .ictp-icons-container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 30px;
+        margin-top: 30px;
+    }
+    
+    .ictp-icon {
+        width: 220px;
+        text-align: center;
+        padding: 25px 15px;
+        border-radius: 12px;
+        background: white;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .ictp-icon:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 20px rgba(0,0,0,0.15);
+    }
+    
+    .icon-circle {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        margin: 0 auto 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 32px;
+        color: white;
+    }
+    
+    .icon-atmosphere {
+        background: linear-gradient(135deg, #4a6a82, #1a3d5c);
+    }
+    
+    .icon-ocean {
+        background: linear-gradient(135deg, #2c8c99, #1a5c69);
+    }
+    
+    .icon-land {
+        background: linear-gradient(135deg, #6a9e5c, #3d7a2c);
+    }
+    
+    .icon-climate {
+        background: linear-gradient(135deg, #d97c2b, #b3591f);
+    }
+    
+    .ictp-icon h4 {
+        margin: 15px 0 10px;
+        color: #1a3d5c;
+        font-size: 1.2em;
+    }
+    
+    .ictp-icon p {
+        color: #5a6a73;
+        font-size: 0.95em;
+        line-height: 1.5;
+    }
+    
+    .ictp-description {
+        text-align: center;
+        max-width: 800px;
+        margin: 0 auto;
+        color: #3b4a57;
+        line-height: 1.6;
+        font-size: 1.05em;
+    }
+    
+    .esp-website-link {
+        display: inline-block;
+        background: linear-gradient(90deg, #4a6a82, #1a3d5c);
+        color: white;
+        padding: 14px 30px;
+        border-radius: 50px;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 1.1em;
+        transition: all 0.3s ease;
+        box-shadow: 0 5px 15px rgba(74, 106, 130, 0.4);
+        margin-top: 25px;
+    }
+    
+    .esp-website-link:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 20px rgba(74, 106, 130, 0.5);
+        color: #fff;
+    }
+    
     @media (max-width: 768px) {
         h1 { font-size: 2.2em; }
         h2 { font-size: 1.1em; }
         th, td { font-size: 0.95em; padding: 12px; }
+        .ictp-icon { width: 100%; max-width: 280px; }
     }
+    
     @media (max-width: 480px) {
         h1 { font-size: 1.8em; }
         h2 { font-size: 1em; }
@@ -154,6 +261,7 @@
         <a href="https://zoom.us/j/94424611839?pwd=TkFGcGxFaUhxVjJkakdXQnorTm45QT09" target="_blank" class="footer-zoom-link">Join Zoom Meeting</a> 
     </h2>
 
+
     <div class="table-container">
         <table>
             <tr> 
@@ -163,45 +271,165 @@
             </tr>
             
             
-            <tr>
-                <td>02 September</td>
-                <td>Luka Ilic</td>
-                <td>
-                    Impact of Dust Mineralogy Representation on Modeled Optical Properties and Radiative Effects Using MONARCH
-                    <span class="see-more" onclick="toggleRow('details2')">see more...</span>
-                </td>
-            </tr>
-            <tr id="details2" class="expandable-row">
-                <td colspan="3">
-                    Mineral dust from arid regions is a major contributor to the global aerosol burden and a key source of uncertainty in weather and climate models due to its radiative effects. These effects, particularly in the shortwave, depend strongly on particle size and mineral composition, especially the presence of iron oxide–carrying minerals. Many global dust models assume fixed or homogeneous source mineralogy, often neglecting size-dependent variability. This is further complicated by uncertainties in source datasets and the computational cost of explicit composition modeling. We use the MONARCH (Multiscale Online Non-hydrostatic AtmospheRe CHemistry) model, coupled with RRTMG, to simulate global dust transport and radiative effects under different mineralogical assumptions. MONARCH resolves individual mineral tracers and uses the Maxwell-Garnett approach to compute optical properties of host particles with iron oxide inclusions. The set of numerical experiments covers varying mineralogy assumptions and a set of soil mineralogy atlases, including the new high-resolution EMIT product.
-                </td>
-            </tr>
+<tr>
+    <td>02 September</td>
+    <td>Luka Ilic</td>
+    <td>
+        Impact of Dust Mineralogy Representation on Modeled Optical Properties and Radiative Effects Using MONARCH
+        <span class="see-more" onclick="toggleRow('details-luka')">see more...</span>
+    </td>
+</tr>
+<tr id="details-luka" class="expandable-row">
+    <td colspan="3">
+        Mineral dust from arid regions is a major contributor to the global aerosol burden and a key source of uncertainty in weather and climate models due to its radiative effects. These effects, particularly in theshortwave, depend strongly on particle size and mineral composition, especially the presence of iron oxide–carrying minerals. Many global dust models assume fixed or homogeneous source mineralogy, often neglecting size-dependent variability. This is further complicated by uncertainties in source datasets and the computational cost of explicit composition modeling. We use the MONARCH (Multiscale Online Non-hydrostatic AtmospheRe CHemistry) model, coupled with RRTMG, to simulate global dust transport and radiative effects under different mineralogical assumptions. MONARCH resolves individual mineral tracers and uses the Maxwell-Garnett approach to compute optical properties of host particles with iron oxide inclusions. The set of numerical experiments covers varying mineralogy assumptions and a set of soil mineralogy atlases, including the new high-resolution EMIT product.
+    </td>
+</tr>
 
 
+<tr>
+    <td>12 September</td>
+    <td>Paolo Ruggieri</td>
+    <td>
+        Hybrid Models for Climate Predictions
+        <span class="see-more" onclick="toggleRow('details-paolo')">see more...</span>
+    </td>
+</tr>
+<tr id="details-paolo" class="expandable-row">
+    <td colspan="3">
+        Data-driven and hypothesis-driven models have coexisted in climate science for decades, with a predominant role for General Circulation Models. Recently, the exponential development of Artificial Intelligence has provided novel opportunities for data-driven techniques, typically with substantial benefits in terms of computational cost. In this seminar, I will discuss how the two families of models can be combined into hybrid architectures, and I will provide examples of prototypes of hybrid climate services in Europe and Africa.
+    </td>
+</tr>
+            
+            
+<tr>
+    <td>23 September</td>
+    <td>Cyril Caminade</td>
+    <td>
+        Soon
+        <span class="see-more" onclick="toggleRow('details-cyril')">see more...</span>
+    </td>
+</tr>
+<tr id="details-cyril" class="expandable-row">
+    <td colspan="3">
+        Soon
+    </td>
+</tr>
 
-            <tr>
-                <td>07 October</td>
-                <td>Sobia Ayub</td>
-                <td>
-                    Estimation of Snow Line Altitude Utilising Satellite Imagery of Alpine Glaciers
-                    <span class="see-more" onclick="toggleRow('details3')">see more...</span>
-                </td>
-            </tr>
-            <tr id="details3" class="expandable-row">
-                <td colspan="3">
-                    Soon.
-                </td>
-            </tr>
-            
-            
-            
+
+<tr>
+    <td>07 October</td>
+    <td>Sobia Ayub</td>
+    <td>
+        Soon
+        <span class="see-more" onclick="toggleRow('details-sobia')">see more...</span>
+    </td>
+</tr>
+<tr id="details-sobia" class="expandable-row">
+    <td colspan="3">
+        Soon
+    </td>
+</tr>
+
+
+<tr>
+    <td>14 October</td>
+    <td>Miguel Garrido Zornoza</td>
+    <td>
+        Soon
+        <span class="see-more" onclick="toggleRow('details-miguel')">see more...</span>
+    </td>
+</tr>
+<tr id="details-miguel" class="expandable-row">
+    <td colspan="3">
+        Soon
+    </td>
+</tr>
+
+
+<tr>
+    <td>21 October</td>
+    <td>Arthur Prigent</td>
+    <td>
+        Soon
+        <span class="see-more" onclick="toggleRow('details-arthur')">see more...</span>
+    </td>
+</tr>
+<tr id="details-arthur" class="expandable-row">
+    <td colspan="3">
+        Soon
+    </td>
+</tr>
+
+
+<tr>
+    <td>11 November</td>
+    <td>Luiza Vargas-Heinz</td>
+    <td>
+        Soon
+        <span class="see-more" onclick="toggleRow('details-luiza')">see more...</span>
+    </td>
+</tr>
+<tr id="details-luiza" class="expandable-row">
+    <td colspan="3">
+        Soon
+    </td>
+</tr>
+
+
+<tr>
+    <td>16 December</td>
+    <td>Adrian Tompinks</td>
+    <td>
+        Soon
+        <span class="see-more" onclick="toggleRow('details-adrian')">see more...</span>
+    </td>
+</tr>
+<tr id="details-adrian" class="expandable-row">
+    <td colspan="3">
+        Soon
+    </td>
+</tr>
+
+                       
         </table> 
     </div>
 
-    <footer>
-        <p>
-            <a href="https://www.ictp.it/esp" target="_blank" class="footer-link">Visit ICTP ESP Website</a>
+    <!-- ICTP ESP Icons Section -->
+    <div class="ictp-esp-info">
+        <h3 style="color: #1a3d5c; margin-top: 0;">About ICTP's Earth System Physics Section</h3>
+        
+        <p class="ictp-description">
+            The Earth System Physics (ESP) section studies a wide spectrum of the Earth system, from its fluid components (oceans and the atmosphere) to the planet's interior. 
         </p>
+        
+        <div class="ictp-icons-container">
+            <div class="ictp-icon">
+                <div class="icon-circle icon-atmosphere">🌪️</div>
+                <h4>Atmospheric Physics</h4>
+            </div>
+            
+            <div class="ictp-icon">
+                <div class="icon-circle icon-ocean">🌊</div>
+                <h4>Ocean Dynamics</h4>
+            </div>
+            
+            <div class="ictp-icon">
+                <div class="icon-circle icon-land">🌍</div>
+                <h4>Land Processes</h4>
+            </div>
+            
+            <div class="ictp-icon">
+                <div class="icon-circle icon-climate">📈</div>
+                <h4>Climate Modeling</h4>
+            </div>
+        </div>
+        
+        <a href="https://www.ictp.it/esp" target="_blank" class="esp-website-link">
+            Visit ICTP ESP Website
+        </a>
+    </div>
+
+    <footer>
         <p>
             Want to present a seminar? Schedule by emailing
             <a href="mailto:mda_silv@ictp.it" class="footer-link">mda_silv@ictp.it</a>.
@@ -210,4 +438,3 @@
 
 </body>
 </html>
-
