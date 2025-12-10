@@ -6,66 +6,47 @@
 <title>ESP Seminar Series 2026</title>
 <style>
     body {
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        background: linear-gradient(135deg, #f5f7fa, #e4e7eb);
-        color: #333333;
         margin: 0;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(to top, #cce0ff 0%, #e6f0ff 100%);
+        color: #333333;
         padding: 20px;
     }
     h1 {
         text-align: center;
-        color: #1a3d5c;
-        margin-bottom: 10px;
-        font-size: 2.7em;
-        font-weight: 700;
-        text-shadow: 1px 1px 3px rgba(26, 61, 92, 0.3);
+        color: #001f3f;
+        font-size: 2.5em;
+        margin-top: 20px;
+        animation: colorChange 5s infinite alternate;
     }
     h2 {
         text-align: center;
-        color: #5a6a73;
+        color: #333;
+        font-size: 1.2em;
         margin-bottom: 30px;
-        font-size: 1.3em;
-        font-weight: 600;
+        font-weight: normal;
     }
     h3 {
         text-align: center;
-        color: #1a3d5c;
-        margin: 40px 0 20px;
-        font-size: 2em;
-        font-weight: 600;
+        color: #001f3f;
+        margin-top: 40px;
+        font-size: 1.8em;
     }
     h4 {
         text-align: center;
-        color: #4a6a82;
-        margin: 30px 0 10px;
-        font-size: 1.5em;
-        font-weight: 600;
+        color: #001f3f;
+        margin: 10px 0 20px;
+        font-size: 1.1em;
+        font-weight: normal;
     }
-    .group-photo {
-        display: block;
-        margin: 30px auto;
-        max-width: 90%;
-        border-radius: 12px;
-        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-    }
-    .footer-zoom-link {
-        color: #4a6a82;
-        font-weight: 700;
-        text-decoration: none;
-        transition: color 0.3s ease;
-    }
-    .footer-zoom-link:hover {
-        color: #2c4a5a;
-        text-decoration: underline;
-    }
+    
     .table-container {
         max-width: 90%;
-        margin: 0 auto;
-        background-color: #ffffff;
+        margin: 30px auto;
+        background-color: rgba(255,255,255,0.9);
         border-radius: 12px;
         overflow-x: auto;
-        box-shadow: 0 8px 20px rgba(59, 74, 87, 0.15);
-        border: 2px solid #4a6a82;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
     table {
         width: 100%;
@@ -74,39 +55,25 @@
     }
     th, td {
         padding: 15px;
-        border: 1px solid #c1c8cd;
-        text-align: left;
+        text-align: center;
+        border-bottom: 1px solid #ddd;
     }
     th {
-        background: #4a6a82;
-        color: #f0f4f8;
-        text-transform: uppercase;
-        letter-spacing: 0.05em;
-        font-weight: 700;
-        box-shadow: inset 0 -3px 5px rgba(0,0,0,0.1);
+        background-color: #001f3f;
+        color: #fff;
     }
-    tr:nth-child(even) { background-color: #f4f7fa; }
-    tr:hover { background-color: #d9e2ea; cursor: pointer; }
-    td { font-size: 1em; color: #3b4a57; }
-    .expandable-row {
-        display: none;
-        background-color: #f9fafb;
-        color: #5a6a73;
-        font-style: italic;
+    tr:nth-child(even) {
+        background-color: #f9f9f9;
     }
-    .see-more {
-        color: #4a6a82;
-        font-size: 0.9em;
-        cursor: pointer;
-        text-decoration: none;
-        font-weight: 600;
-        margin-left: 10px;
-        transition: color 0.3s ease;
+    tr:hover {
+        background-color: #e0f7fa;
     }
-    .see-more:hover { color: #2c4a5a; text-decoration: underline; }
-
+    
     /* Calendar Styles */
-    .calendar-section { max-width: 95%; margin: 40px auto; }
+    .calendar-section {
+        max-width: 95%;
+        margin: 40px auto;
+    }
     .year-calendar {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -114,14 +81,13 @@
         margin-top: 20px;
     }
     .month-calendar {
-        background-color: #ffffff;
-        border-radius: 10px;
+        background-color: rgba(255,255,255,0.9);
+        border-radius: 12px;
         overflow: hidden;
-        box-shadow: 0 4px 15px rgba(59, 74, 87, 0.1);
-        border: 1px solid #c1c8cd;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
     .month-header {
-        background: linear-gradient(90deg, #4a6a82, #3b4a57);
+        background-color: #001f3f;
         color: white;
         text-align: center;
         padding: 12px;
@@ -131,19 +97,19 @@
     .calendar-weekdays {
         display: grid;
         grid-template-columns: repeat(7, 1fr);
-        background: #e4e7eb;
+        background: #f0f0f0;
         font-weight: 600;
-        color: #3b4a57;
+        color: #333;
         text-align: center;
         padding: 8px 0;
         font-size: 0.9em;
-        border-bottom: 1px solid #c1c8cd;
+        border-bottom: 1px solid #ddd;
     }
     .calendar-days {
         display: grid;
         grid-template-columns: repeat(7, 1fr);
         gap: 1px;
-        background: #c1c8cd;
+        background: #ddd;
     }
     .calendar-day {
         background: white;
@@ -152,14 +118,28 @@
         position: relative;
         transition: background 0.3s ease;
         font-size: 0.85em;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
-    .calendar-day:hover { background: #f4f7fa; }
-    .day-number { font-weight: 600; color: #3b4a57; }
-    .other-month { color: #a0aec0 !important; background: #f8f9fa; }
-    .tuesday { background-color: #e8f4fd !important; border-left: 3px solid #4a6a82; }
+    .calendar-day:hover {
+        background: #e6f0ff;
+    }
+    .day-number {
+        font-weight: 600;
+        color: #333;
+    }
+    .other-month {
+        display: none;
+    }
+    .tuesday {
+        background-color: #e6f0ff !important;
+        border-left: 2px solid #0074D9;
+    }
     .seminar-day {
         background-color: #d1e7ff !important;
-        border: 2px solid #1a3d5c !important;
+        border: 2px solid #0074D9 !important;
         position: relative;
     }
     .seminar-day::after {
@@ -167,9 +147,10 @@
         position: absolute;
         top: 2px;
         right: 2px;
-        color: #1a3d5c;
+        color: #0074D9;
         font-size: 0.8em;
     }
+    
     .calendar-legend {
         display: flex;
         justify-content: center;
@@ -177,45 +158,93 @@
         gap: 20px;
         margin-top: 25px;
         padding: 15px;
-        background: #ffffff;
+        background: rgba(255,255,255,0.9);
         border-radius: 10px;
-        box-shadow: 0 4px 10px rgba(59, 74, 87, 0.1);
-        border: 1px solid #c1c8cd;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
-    .legend-item { display: flex; align-items: center; gap: 8px; font-size: 0.9em; color: #3b4a57; }
-    .legend-color { width: 20px; height: 20px; border-radius: 4px; }
+    .legend-item {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 0.9em;
+        color: #333;
+    }
+    .legend-color {
+        width: 20px;
+        height: 20px;
+        border-radius: 4px;
+    }
+    
     footer {
-        background: linear-gradient(90deg, #4a6a82, #3b4a57);
-        padding: 25px 20px;
         text-align: center;
-        font-size: 15px;
-        color: #e1e6eb;
-        margin-top: 60px;
-        border-radius: 12px 12px 0 0;
-        box-shadow: 0 -4px 15px rgba(74, 106, 130, 0.5);
+        padding: 20px;
+        background: rgba(255, 255, 255, 0.8);
+        font-size: 0.9em;
+        margin-top: 40px;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    
+    a {
+        color: #001f3f;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
+    
+    .see-more {
+        color: #0074D9;
+        font-size: 0.9em;
+        cursor: pointer;
+        text-decoration: none;
         font-weight: 600;
+        margin-left: 10px;
+        transition: color 0.3s ease;
     }
-    .footer-link { color: #b0c4cc; font-weight: 700; text-decoration: none; transition: color 0.3s ease; }
-    .footer-link:hover { color: #d6e1e8; text-decoration: underline; }
-
+    .see-more:hover {
+        color: #001f3f;
+        text-decoration: underline;
+    }
+    
+    .expandable-row {
+        display: none;
+        background-color: #f9f9f9;
+        color: #666;
+        font-style: italic;
+    }
+    
+    @keyframes colorChange {
+        from { color: #001f3f; }
+        to { color: #0074D9; }
+    }
+    
     @media (max-width: 768px) {
-        h1 { font-size: 2.2em; }
-        h2 { font-size: 1.1em; }
-        h3 { font-size: 1.7em; }
-        h4 { font-size: 1.3em; }
-        th, td { font-size: 0.95em; padding: 12px; }
-        .year-calendar { grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); }
-        .calendar-day { min-height: 30px; font-size: 0.8em; }
+        h1 {
+            font-size: 2em;
+        }
+        .table-container, .calendar-section {
+            max-width: 95%;
+        }
+        .year-calendar {
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        }
     }
+    
     @media (max-width: 480px) {
-        h1 { font-size: 1.8em; }
-        h2 { font-size: 1em; }
-        h3 { font-size: 1.5em; }
-        h4 { font-size: 1.2em; }
-        th, td { font-size: 0.85em; padding: 10px; }
-        .year-calendar { grid-template-columns: 1fr; }
-        .calendar-day { min-height: 25px; }
-        .calendar-legend { flex-direction: column; align-items: center; }
+        h1 {
+            font-size: 1.8em;
+        }
+        h2, h3, h4 {
+            font-size: 1em;
+        }
+        .year-calendar {
+            grid-template-columns: 1fr;
+        }
+        .calendar-day {
+            min-height: 30px;
+        }
     }
 </style>
 
@@ -259,7 +288,11 @@
             const weekdaysDiv = document.createElement('div');
             weekdaysDiv.className = 'calendar-weekdays';
             const weekdays = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
-            weekdays.forEach(day => { const d = document.createElement('div'); d.textContent = day; weekdaysDiv.appendChild(d); });
+            weekdays.forEach(day => { 
+                const d = document.createElement('div'); 
+                d.textContent = day; 
+                weekdaysDiv.appendChild(d); 
+            });
             monthDiv.appendChild(weekdaysDiv);
 
             const daysGrid = document.createElement('div');
@@ -270,38 +303,36 @@
             const daysInMonth = lastDay.getDate();
             const startingDay = firstDay.getDay();
 
-            for (let i = 0; i < startingDay; i++) {
-                const emptyCell = document.createElement('div');
-                emptyCell.className = 'calendar-day other-month';
-                emptyCell.innerHTML = `<div class="day-number"></div>`;
-                daysGrid.appendChild(emptyCell);
-            }
-
             for (let day = 1; day <= daysInMonth; day++) {
                 const currentDate = new Date(2026, month, day);
                 const dateString = `${currentDate.getFullYear()}-${String(currentDate.getMonth()+1).padStart(2,'0')}-${String(currentDate.getDate()).padStart(2,'0')}`;
                 const dayOfWeek = currentDate.getDay();
                 const isSeminarDay = seminarDates.includes(dateString);
                 const isTuesday = dayOfWeek === 2;
+                
+                const isAugustOrSeptember = month === 7 || month === 8;
 
                 const dayElement = document.createElement('div');
                 dayElement.className = 'calendar-day';
-                if (isTuesday) dayElement.classList.add('tuesday');
-                if (isSeminarDay) dayElement.classList.add('seminar-day');
+                
+                if (isTuesday && !isAugustOrSeptember) {
+                    dayElement.classList.add('tuesday');
+                }
+                
+                if (isSeminarDay) {
+                    dayElement.classList.add('seminar-day');
+                }
+                
                 dayElement.innerHTML = `<div class="day-number">${day}</div>`;
                 if (isSeminarDay && seminarSpeakers[dateString]) {
                     dayElement.title = `Seminar: ${seminarSpeakers[dateString]}`;
                 }
+                
                 daysGrid.appendChild(dayElement);
-            }
-
-            const totalCells = 42;
-            const remainingCells = totalCells - (startingDay + daysInMonth);
-            for (let i = 0; i < remainingCells; i++) {
-                const emptyCell = document.createElement('div');
-                emptyCell.className = 'calendar-day other-month';
-                emptyCell.innerHTML = `<div class="day-number"></div>`;
-                daysGrid.appendChild(emptyCell);
+                
+                if (day === 1 && startingDay !== 0) {
+                    dayElement.style.gridColumnStart = startingDay + 1;
+                }
             }
 
             monthDiv.appendChild(daysGrid);
@@ -318,58 +349,72 @@
     <h2>
         On Tuesdays, 11am, in the Common Area of the ex SISSA building.<br />
         To follow on Zoom: 
-        <a href="https://zoom.us/j/94424611839?pwd=TkFGcGxFaUhxVjJkakdXQnorTm45QT09" target="_blank" class="footer-zoom-link">
+        <a href="https://zoom.us/j/94424611839?pwd=TkFGcGxFaUhxVjJkakdXQnorTm45QT09" target="_blank">
             Join Zoom Meeting
         </a>
     </h2>
 
     <div class="table-container">
         <table>
-            <tr><th>Date</th><th>Speaker</th><th>Title / Abstract</th></tr>
+            <tr>
+                <th>Date</th>
+                <th>Speaker</th>
+                <th>Title / Abstract</th>
+            </tr>
 
             <tr>
                 <td>13 January</td>
                 <td>Maria Shabir</td>
                 <td>Soon <span class="see-more" onclick="toggleRow('details-shabir')">see more...</span></td>
             </tr>
-            <tr id="details-shabir" class="expandable-row"><td colspan="3">Soon</td></tr>
+            <tr id="details-shabir" class="expandable-row">
+                <td colspan="3">Soon</td>
+            </tr>
 
             <tr>
                 <td>20 January</td>
                 <td>Antonio Salinas</td>
                 <td>Soon <span class="see-more" onclick="toggleRow('details-antonio')">see more...</span></td>
             </tr>
-            <tr id="details-antonio" class="expandable-row"><td colspan="3">Soon</td></tr>
+            <tr id="details-antonio" class="expandable-row">
+                <td colspan="3">Soon</td>
+            </tr>
 
             <tr>
                 <td>27 January</td>
                 <td>Adrian Tompkins </td>
                 <td>Soon <span class="see-more" onclick="toggleRow('details-adrian')">see more...</span></td>
             </tr>
-            <tr id="details-adrian" class="expandable-row"><td colspan="3">Soon</td></tr>
+            <tr id="details-adrian" class="expandable-row">
+                <td colspan="3">Soon</td>
+            </tr>
 
             <tr>
                 <td>03 February</td>
                 <td>Marco Reale</td>
                 <td>Soon <span class="see-more" onclick="toggleRow('details-marco')">see more...</span></td>
             </tr>
-            <tr id="details-marco" class="expandable-row"><td colspan="3">Soon</td></tr>
+            <tr id="details-marco" class="expandable-row">
+                <td colspan="3">Soon</td>
+            </tr>
 
             <tr>
                 <td>10 February</td>
                 <td>Laurel Di Sera</td>
                 <td>Soon <span class="see-more" onclick="toggleRow('details-laurel')">see more...</span></td>
             </tr>
-            <tr id="details-laurel" class="expandable-row"><td colspan="3">Soon</td></tr>
+            <tr id="details-laurel" class="expandable-row">
+                <td colspan="3">Soon</td>
+            </tr>
 
             <tr>
                 <td>17 February</td>
                 <td>Maria Leidinice da Silva</td>
                 <td>Soon <span class="see-more" onclick="toggleRow('details-maria')">see more...</span></td>
             </tr>
-            <tr id="details-maria" class="expandable-row"><td colspan="3">Soon</td></tr>
-            
-            
+            <tr id="details-maria" class="expandable-row">
+                <td colspan="3">Soon</td>
+            </tr>
         </table>
     </div>
 
@@ -382,9 +427,8 @@
     <footer>
         <p>
             Want to present a seminar? Schedule by emailing
-            <a href="mailto:mda_silv@ictp.it" class="footer-link">mda_silv@ictp.it</a>.
+            <a href="mailto:mda_silv@ictp.it">mda_silv@ictp.it</a>.
         </p>
     </footer>
 </body>
 </html>
-

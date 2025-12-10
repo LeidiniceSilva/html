@@ -22,6 +22,11 @@
             color: #333;
             font-size: 1.2em;
         }
+        h3 {
+            text-align: center;
+            color: #001f3f;
+            margin-top: 40px;
+        }
         .table-container {
             max-width: 90%;
             margin: 30px auto;
@@ -50,6 +55,20 @@
         tr:hover {
             background-color: #e0f7fa;
         }
+        .dashboard-container {
+            max-width: 95%;
+            margin: 30px auto 60px;
+            background: rgba(255,255,255,0.95);
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        iframe {
+            width: 100%;
+            height: 500px; /* reduced size for Windy */
+            border: none;
+            border-radius: 8px;
+        }
         footer {
             text-align: center;
             padding: 20px;
@@ -70,48 +89,62 @@
         }
         @media (max-width: 768px) {
             h1 { font-size: 2em; }
-            table { min-width: 100%; }
+            iframe { height: 400px; }
         }
     </style>
 </head>
+
 <body>
 
-    <h1>ESP Current Weather 2026</h1>
-    <h2>
-        On Fridays, 2:30pm, in the Common Area of the ex SISSA building.<br>
-        To follow on Zoom: <a href="https://zoom.us/j/94424611839?pwd=TkFGcGxFaUhxVjJkakdXQnorTm45QT09" target="_blank">Join Zoom Meeting</a> 
-    </h2>
+<h1>ESP Current Weather 2026</h1>
+<h2>
+    On Fridays, 2:30pm, in the Common Area of the ex SISSA building.<br>
+    To follow on Zoom:
+    <a href="https://zoom.us/j/94424611839?pwd=TkFGcGxFaUhxVjJkakdXQnorTm45QT09" target="_blank">
+        Join Zoom Meeting
+    </a>
+</h2>
 
-    <!-- Live Weather Map Widget -->
-    <div style="text-align: center; margin: 30px auto;">
-        <iframe src="https://embed.windy.com/embed2.html?lat=45.65&lon=13.77&detailLat=45.65&detailLon=13.77&width=650&height=450&zoom=6&level=surface&overlay=wind&menu=&message=&marker=&calendar=now&pressure=&type=map&location=coordinates&detail=&metricWind=default&metricTemp=default&radarRange=-1"
-            frameborder="0" width="650" height="450"></iframe>
-    </div>
+<!-- Speakers Table -->
+<div class="table-container">
+    <table>
+        <tr>
+            <th>Date</th>
+            <th>Speaker</th>
+        </tr>
+        <tr><td>16 January 2026</td><td>Miguel Garrido Zornoza</td></tr>
+        <tr><td>23 January 2026</td><td>Fred Kucharski</td></tr>
+        <tr><td>30 January 2026</td><td>Adrian Tompkins</td></tr>
+        <tr><td>06 February 2026</td><td>Maria Leidinice da Silva</td></tr>
+        <tr><td>13 February 2026</td><td>Sobia Ayub</td></tr>
+        <tr><td>20 March 2026</td><td>Cyril Caminade</td></tr>
+        <tr><td>27 March 2026</td><td>Tapajyoti Chakraborty</td></tr>
+        <tr><td>03 March 2026</td><td>Marco Reale</td></tr>
+        <tr><td>13 March 2026</td><td>Wenchang Tang</td></tr>
+        <tr><td>20 March 2026</td><td>Nazimur Chowdhury</td></tr>
+        <tr><td>27 March 2026</td><td>Laurel DiSera</td></tr>
+    </table>
+</div>
 
-    <div class="table-container">
-        <table>
-            <tr> 
-                <th>Date</th>
-                <th>Speaker</th>
-            </tr>
-            <tr><td>16 January 2026</td><td>Miguel Garrido Zornoza</td></tr>
-            <tr><td>23 January 2026</td><td>Fred Kucharski</td></tr>
-            <tr><td>30 January 2026</td><td>Adrian Tompkins</td></tr>
-            <tr><td>06 February 2026</td><td>Maria Leidinice da Silva</td></tr>
-	    <tr><td>13 February 2026</td><td>Sobia Ayub</td></tr>
-            <tr><td>20 March 2026</td><td>Cyril Caminade</td></tr>
-            <tr><td>27 March 2026</td><td>Tapajyoti Chakraborty</td></tr>
-            <tr><td>03 March 2026</td><td>Marco Reale</td></tr>
-            <tr><td>13 March 2026</td><td>Wenchang Tang</td></tr>
-            <tr><td>20 March 2026</td><td>Nazimur Chowdhuryt</td></tr>
-            <tr><td>27 March 2026</td><td>Laurel DiSera</td></tr>
-        </table> 
-    </div>
+<!-- Windy Map with Title -->
+<div class="dashboard-container">
+    <iframe
+        src="https://embed.windy.com/embed2.html?lat=45.65&lon=13.77&zoom=6&overlay=wind"
+        title="Windy Live Map">
+    </iframe>
+</div>
 
-    <footer>
-        Want to present Current Weather? Schedule by emailing 
-        <a href="mailto:mda_silv@ictp.it" class="footer-link">mda_silv@ictp.it</a>.
-    </footer>
+<!-- UNESCO Dashboard -->
+<div class="dashboard-container">
+    <iframe
+        src="https://tb.ihp-wins.unesco.org/dashboard/20182060-ab54-11f0-8f75-a755c2118e96?publicId=18612910-ab41-11f0-8f75-a755c2118e96">
+    </iframe>
+</div>
+
+<footer>
+    Want to present Current Weather? Schedule by emailing
+    <a href="mailto:mda_silv@ictp.it" class="footer-link">mda_silv@ictp.it</a>.
+</footer>
 
 </body>
 </html>
